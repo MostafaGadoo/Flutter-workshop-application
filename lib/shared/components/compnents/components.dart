@@ -116,3 +116,22 @@ void navigateTo(context, widget) => Navigator.push(
     builder: (context) => widget,
   )
 );
+
+Widget buildSettingsItem({@required title, @required function}) => Column(
+  children: [
+    SizedBox(
+      height: 1.0,
+    ),
+        ListTile(
+         tileColor: Colors.white,
+          onTap: function,
+         title: Text(
+             title.toString(),
+         ),
+          trailing: Icon(
+          Icons.arrow_forward_ios,
+          size: 14.0,
+          ),
+        ),
+  ],
+);
